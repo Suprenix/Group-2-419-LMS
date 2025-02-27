@@ -1,7 +1,7 @@
 import { Outlet } from "react-router";
 import NavBar from "./NavBar";
 import Footer from "./footer";
-import Home from "./pages/Home/Home";
+import TeacherLogin from "./pages/Teacher/TeacherLogin";
 
 export default function App() {
 return (
