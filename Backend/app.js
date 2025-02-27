@@ -19,10 +19,9 @@ connectDB();
 const studentRoutes = require("./routes/studentRoutes.js");
 const teacherRoutes = require("./routes/teacherRoutes.js");
 const adminRoutes = require("./routes/adminRoutes.js");
-const manageUsersRoutes = require("./routes/manageUsersRoutes.js")
+const manageUsersRoutes = require("./routes/manageUsersRoutes.js");
 
-
-// Endpoints 
+// Endpoints
 app.use("/student", studentRoutes);
 app.use("/teacher", teacherRoutes);
 app.use("/admin", adminRoutes);
@@ -32,10 +31,7 @@ app.use("/users", manageUsersRoutes);
 //     res.send({message : "Testing"});
 // });
 
-
-
-
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () =>{
-    console.log(`The server is running on port ${PORT}`);
+app.listen(PORT, () => {
+  console.log(`The server is running on port ${PORT}`);
 });
