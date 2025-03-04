@@ -41,6 +41,7 @@ const loginAdmin = async (req, res) => {
             return res.status(400).json({message : "Invalid email or password"});
         }
         const token = jwt.sign({id: user._id, email : user.email, role : user.role}, process.env.JWT_SECRET, { expiresIn: "2h" });
+        res.setHeader("Authorization", `Bearer ${token}`);
         return res.status(200).json({message : "Admin logged in successfully", token, userId: user._id});    
     }
     catch(error){
